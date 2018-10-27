@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ShopListItemComponent } from './shops/shop-list-item.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShopListItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
