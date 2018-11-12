@@ -1,27 +1,4 @@
-<app-shop-list-item *ngFor="let shop of shops"
-  [name]="shop.name"
-  [score]="shop.score"
-  [street]="shop.address">
-</app-shop-list-item>
-
-
-
-
-
-<button (click)="shouldShowContent = !shouldShowContent">
-  {{ shouldShowContent ? 'Hide' : 'Show' }}
-</button>
-<div *ngIf="shouldShowContent">
-  content
-</div>
-
-<!-- <div [formGroup]="ratingForm">
-  score:
-  <input type="text" formControlName="ratingScore">
-  <br>
-  review:
-  <input type="text-area" formControlName="ratingReview">
-</div>
-
-
-<button (click)="addRatingForShop()">add rating</button> -->
+<main-nav>
+    <app-trending-newest></app-trending-newest>
+</main-nav>
+ 

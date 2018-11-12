@@ -1,22 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ShopListItemComponent } from './shops/shop-list-item.component';
+import {MaterialModule} from './material-module/material.module';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { TrendingNewestComponent } from './trending-newest/trending-newest.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShopListItemComponent
+    MainNavComponent,
+    TrendingNewestComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
