@@ -9,9 +9,9 @@ import {MaterialModule} from './material-module/material.module';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
 import { TrendingNewestComponent } from './trending-newest/trending-newest.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,9 @@ import { TrendingNewestComponent } from './trending-newest/trending-newest.compo
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
