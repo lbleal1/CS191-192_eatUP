@@ -28,6 +28,7 @@ import { ReviewsMenuComponent } from './food-estab/reviews-menu/reviews-menu.com
 import { MenuComponent } from './food-estab/reviews-menu/menu/menu.component';
 import { ReviewsComponent } from './food-estab/reviews-menu/reviews/reviews.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +51,7 @@ import { ReviewsComponent } from './food-estab/reviews-menu/reviews/reviews.comp
     ReviewsMenuComponent,
     MenuComponent,
     ReviewsComponent
+
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,7 @@ import { ReviewsComponent } from './food-estab/reviews-menu/reviews/reviews.comp
     MatIconModule,
     MatListModule,
     MatTabsModule,
-    FlexLayoutModule,
+    FlexLayoutModule
     MatCardModule
   ],
   providers: [],
