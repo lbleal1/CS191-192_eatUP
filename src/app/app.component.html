@@ -1,27 +1,23 @@
-<app-shop-list-item *ngFor="let shop of shops"
-  [name]="shop.name"
-  [score]="shop.score"
-  [street]="shop.address">
-</app-shop-list-item>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav 
+        #sidenav 
+        class="sidenav" 
+        [ngClass] = "{ hidden: !(isHandset$ | async)}"
+        fixedInViewport="false"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="!(isHandset$ | async)">
+    
+        <app-sidenav-list (closeSidenav)="sidenav.close()"></app-sidenav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+      <main>
+            <router-outlet></router-outlet>
+      <!--<app-trending-newest></app-trending-newest> -->
+    </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+       
 
-
-
-
-
-<button (click)="shouldShowContent = !shouldShowContent">
-  {{ shouldShowContent ? 'Hide' : 'Show' }}
-</button>
-<div *ngIf="shouldShowContent">
-  content
-</div>
-
-<!-- <div [formGroup]="ratingForm">
-  score:
-  <input type="text" formControlName="ratingScore">
-  <br>
-  review:
-  <input type="text-area" formControlName="ratingReview">
-</div>
-
-
-<button (click)="addRatingForShop()">add rating</button> -->
