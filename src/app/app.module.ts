@@ -20,14 +20,18 @@ import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchResultsComponent } from './search-page/search-results/search-results.component';
 import { FoodEstabComponent } from './food-estab/food-estab.component';
 import { FoodEstabDisplayComponent } from './food-estab/food-estab-display/food-estab-display.component';
-import { AddRatingReviewComponent } from './food-estab/add-rating-review/add-rating-review.component';
+import { AddRatingReviewComponent, AddRatingReviewDialog } from './food-estab/add-rating-review/add-rating-review.component';
 import { RatingComponent } from './food-estab/add-rating-review/rating/rating.component';
 import { ReviewComponent } from './food-estab/add-rating-review/review/review.component';
 import { AddtlDetailsComponent } from './food-estab/addtl-details/addtl-details.component';
 import { ReviewsMenuComponent } from './food-estab/reviews-menu/reviews-menu.component';
 import { MenuComponent } from './food-estab/reviews-menu/menu/menu.component';
 import { ReviewsComponent } from './food-estab/reviews-menu/reviews/reviews.component';
+import { AddMenuItemComponent, AddMenuItemDialog } from './food-estab/add-menu-item/add-menu-item.component';
 
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,10 @@ import { ReviewsComponent } from './food-estab/reviews-menu/reviews/reviews.comp
     AddtlDetailsComponent,
     ReviewsMenuComponent,
     MenuComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    AddMenuItemComponent,
+    AddRatingReviewDialog,
+    AddMenuItemDialog
 
   ],
   imports: [
@@ -66,7 +73,14 @@ import { ReviewsComponent } from './food-estab/reviews-menu/reviews/reviews.comp
     MatListModule,
     MatTabsModule,
     FlexLayoutModule
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule,
+    MatDialogModule,
+    MatInputModule
+  ],
+  entryComponents:[
+    AddRatingReviewDialog,
+    AddMenuItemDialog
   ],
   providers: [],
   bootstrap: [AppComponent]
